@@ -1,0 +1,145 @@
+// animation logo header
+@keyframes logo {
+  0% {
+    height: 100%;
+    opacity: 0;
+  }
+  100% {
+    height: 40%;
+    opacity: 1;
+  }
+}
+
+// animation curseur h2 
+@keyframes cursor {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// animations liens
+@keyframes tremors {
+  0%{
+    transform: rotate(0);
+  }
+  10%{
+    transform: rotate(2deg);
+  }
+  20%{
+    transform: rotate(0);
+  }
+  30%{
+    transform: rotate(-2deg);
+  }
+  40%{
+    transform: rotate(0);
+  }
+  50%{
+    transform: rotate(2deg);
+  }
+  60%{
+    transform: rotate(0);
+  }
+  70%{
+    transform: rotate(-2deg);
+  }
+  80%{
+    transform: rotate(0);
+  }
+  90%{
+    transform: rotate(2deg);
+  }
+  100%{
+    transform: rotate(0);
+  }
+}
+
+// animation h1
+@keyframes reveal-h1 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// animation menu
+@keyframes reveal-menu {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// animations section citations
+@keyframes slider {
+  0% {
+    left: 0%;
+  }
+  20% {
+    left: 0%;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  95% {
+    left: -300%;
+  }
+  100% {
+    left: -400%;
+  }
+}
+
+// animations cercles compétences
+// fonctionne avec les classes html-active, css-active et js-active
+@keyframes gauge-html {
+  to {
+    stroke-dashoffset: 300;
+  }
+}
+
+@keyframes gauge-css {
+  to {
+    stroke-dashoffset: 400;
+  }
+}
+
+@keyframes gauge-js {
+  to {
+    stroke-dashoffset: 500;
+  }
+}
+
+// animations progress bar
+@keyframes progress-bar {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+

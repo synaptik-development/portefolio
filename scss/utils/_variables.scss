@@ -1,0 +1,13 @@
+$color-primary: #ff7f00;
+$color-secondary: #03224c;
+$color-tertiary: rgb(248,248,255); 
+$padding: 3rem 1.5rem;
+$duration: 2500ms;
+
+// variables carousel achievements
+$n: 6;
+$item-width: 400px;
+$item-separation: 80px;
+$viewer-distance: 500px;
+$theta: 2 * 3.141592653589793 / $n; 
+$apothem: 482.842712474619px;

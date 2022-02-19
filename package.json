@@ -1,0 +1,14 @@
+{
+  "name": "portefolio",
+  "version": "1.0.0",
+  "description": "présentation des compétences et des prjoets réalisés",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./scss/style.scss:./css/style.css"
+  },
+  "author": "synaptik development",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.48.0"
+  }
+}
