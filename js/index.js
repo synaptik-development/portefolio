@@ -91,7 +91,7 @@ window.addEventListener("scroll", () => {
 // fin declenchement barre de menu fixe
 
 // ----------------------------------------
-// carrousel achievements
+// rotations des cartes (section réalisations)
 // ---------------------------------------
 const returnCard = document.querySelectorAll(".fa-arrow-rotate-left");
 
@@ -105,4 +105,18 @@ returnCard.forEach((element) => {
     }
   });
 });
-// fin carrousel achievements fenêtres
+
+const slideWindow = document.querySelectorAll(".fa-chevron-up");
+slideWindow.forEach((element) => {
+  const target = element.parentElement.nextElementSibling;
+  element.addEventListener("click", () => {
+    if (!element.classList[2]) {
+      element.classList.add("fa-chevron-up--down");
+      target.classList.add("card_content--hidden--active");
+    } else {
+      element.classList.remove("fa-chevron-up--down");
+      target.classList.remove("card_content--hidden--active");
+    }
+  });
+});
+// fin rotations des cartes (section réalisations)
