@@ -123,6 +123,17 @@
     transform: translateX(0);
   }
 }
+@keyframes mouse {
+  0% {
+    font-size: 2rem;
+  }
+  50% {
+    font-size: 3rem;
+  }
+  100% {
+    font-size: 2rem;
+  }
+}
 .header {
   position: relative;
   color: #ff7f00;
@@ -381,54 +392,7 @@ main section {
 ----- citations -----
 */
 .quotes {
-  color: #f2f2f2;
-  position: relative;
-  padding: 0;
-  overflow: hidden;
-}
-.quotes .diaporama {
-  width: 500%;
-  height: 500px;
-  position: relative;
-  margin: 0;
-  left: 0;
-  display: flex;
-  overflow: hidden;
-  animation: 30s slider infinite;
-}
-.quotes .diaporama .quote {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-shadow: 0 0 2px white;
-  width: 20%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  overflow: hidden;
-}
-.quotes .diaporama .quote--1 {
-  background: url("");
-}
-.quotes .diaporama .quote--2 {
-  background: url("/images/joker.jpg");
-}
-.quotes .diaporama .quote--3 {
-  background: url("/images/cathedrale.jpg");
-}
-.quotes .diaporama .quote--4 {
-  background: url("/images/pieton.jpg");
-}
-.quotes .diaporama .quote blockquote {
-  width: 65%;
-  display: flex;
-  flex-direction: column;
-  font-size: 2rem;
-}
-.quotes .diaporama .quote blockquote p {
-  align-self: flex-end;
-  font-size: 1rem;
+  display: none;
 }
 
 /* fin de section */
@@ -777,10 +741,22 @@ main section {
   right: 0;
   bottom: 60px;
 }
+.achievements .card_content--front i {
+  position: absolute;
+  top: 50%;
+  width: fit-content;
+  color: #303030;
+  transform: translateX(-50%);
+  margin-left: 50%;
+  z-index: 1;
+  font-size: 2rem;
+  color: rgba(48, 48, 48, 0.8);
+}
 .achievements .card_content--front img {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  opacity: 0.9;
 }
 .achievements .card_content--hidden {
   transition: 600ms ease;
@@ -794,6 +770,7 @@ main section {
   text-shadow: black 0.1em 0.1em 0.2em;
   text-align: justify;
   opacity: 0;
+  z-index: 2;
 }
 .achievements .card_content--hidden:hover {
   opacity: 1;
@@ -817,7 +794,7 @@ main section {
   transform: rotateY(180deg);
   padding: 0.5rem 1rem;
   text-shadow: black 0.1em 0.1em 0.2em;
-  background: url(/images/logo2.png), rgba(3, 34, 76, 0.5);
+  background: url("/images/logo2.png"), rgba(3, 34, 76, 0.5);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 50% 50%;
