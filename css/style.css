@@ -210,7 +210,7 @@
 .fixed-navbar {
   font-family: "Press Start 2P", cursive;
   z-index: 1;
-  background: rgba(48, 48, 48, 0.9);
+  background-image: rgba(48, 48, 48, 0.9);
   display: flex;
   justify-content: space-between;
   padding: 5px 1rem;
@@ -407,16 +407,16 @@ main section {
   overflow: hidden;
 }
 .quotes .diaporama .quote--1 {
-  background-image: url("/images/error.jpg");
+  background-image: url(/images/error.jpg);
 }
 .quotes .diaporama .quote--2 {
-  background-image: url("/images/joker.jpg");
+  background-image: url(/images/joker.jpg);
 }
 .quotes .diaporama .quote--3 {
-  background-image: url("/images/cathedrale.jpg");
+  background-image: url(/images/cathedrale.jpg);
 }
 .quotes .diaporama .quote--4 {
-  background-image: url("/images/pieton.jpg");
+  background-image: url(/images/pieton.jpg);
 }
 .quotes .diaporama .quote blockquote {
   width: 65%;
@@ -492,7 +492,7 @@ main section {
 .skills {
   position: relative;
   color: ghostwhite;
-  background: url("/images/background-achievements.jpg"), rgba(0, 0, 0, 0.6);
+  background-image: url(/images/background-achievements.jpg), rgba(0, 0, 0, 0.6);
   background-size: cover;
   background-attachment: fixed;
   background-blend-mode: multiply;
@@ -786,7 +786,7 @@ main section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: rgba(48, 48, 48, 0.8);
+  background-image: rgba(48, 48, 48, 0.8);
   color: ghostwhite;
   padding: 0.5rem;
   text-shadow: black 0.1em 0.1em 0.2em;
@@ -815,7 +815,7 @@ main section {
   transform: rotateY(180deg);
   padding: 0.5rem 1rem;
   text-shadow: black 0.1em 0.1em 0.2em;
-  background: url("/images/logo2.png"), rgba(3, 34, 76, 0.5);
+  background-image: url(/images/logo2.png), rgba(3, 34, 76, 0.5);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 50% 50%;
