@@ -6,9 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/063dc94bce.js" crossorigin="anonymous"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Gloria+Hallelujah&family=Press+Start+2P&display=swap');
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
     <title>Synaptik-development</title>
@@ -17,6 +18,11 @@
 <body>
     <!-- header -->
     <header id="header" class="header">
+        <div class="thunder">
+            <canvas id="canvas1"></canvas>
+            <canvas id="canvas2"></canvas>
+            <canvas id="canvas3"></canvas>
+        </div>
         <div class="header_img">
             <img src="./images/logo2.png" alt="logo synaptik-development">
         </div>
@@ -210,7 +216,7 @@
 
                     <div data-spy class="line-skill">
                         <div class="line-skill_title">
-                            <img src="./images/git.png" alt="logo git">
+                            <img src="./images/logo_git.png" alt="logo git">
                             <span>GIT</span>
                         </div>
                         <div class="progress-bar">
@@ -235,16 +241,363 @@
 
         </section>
 
+        <!-- Réalisations -->
         <section id="achievements" class="achievements">
             <div class="achievements_title">
                 <h2>Réalisations</h2>
             </div>
 
             <div class="achievements_content section-content">
+                <!-- RESERVIA -->
+                <article class="card card--1">
+                    <div class="card_top">RESERVIA</div>
+                    <div class="card_top card_top--back">RESERVIA</div>
+
+                    <div class="card_bottom">
+                        <a title="liens github"
+                            href="https://github.com/synaptik-development/kuhlersebastien_2_01042021.github.io">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+
+                        <a title="retourner la carte">
+                            <i class="fa-solid fa-arrow-rotate-left 1"></i>
+                        </a>
+
+                        <a title="page web"
+                            href="https://synaptik-development.github.io/kuhlersebastien_2_01042021.github.io/">
+                            <i class="fa-solid fa-globe"></i>
+                        </a>
+                    </div>
+                    <div class="card_bottom card_bottom--back">
+                        <a title="liens github"
+                            href="https://github.com/synaptik-development/kuhlersebastien_2_01042021.github.io">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+
+                        <a title="retourner la carte">
+                            <i class="fa-solid fa-arrow-rotate-left 1"></i>
+                        </a>
+
+                        <a title="page web"
+                            href="https://synaptik-development.github.io/kuhlersebastien_2_01042021.github.io/">
+                            <i class="fa-solid fa-globe"></i>
+                        </a>
+                    </div>
+
+                    <div class="card_content card_content--front">
+                        <img src="./images/p2.png" alt="capture d'écran du site réservia">
+                    </div>
+                    <div class="card_content card_content--hidden">
+                        <div class="description">
+                            <strong>
+                                Description : <br>
+                                Transformation d'une maquette photoshop en site web responsive codé en HTML5 et CSS3.
+                            </strong>
+                        </div>
+                        <div>
+                            <h4>Techonologies</h4>
+                            <div class="icons">
+                                <img src="./images/html5.png" alt="html5">
+                                <img src="./images/css3.jpg" alt="css3">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_content card_content--back">
+                        <h4>Processus d'implémentation</h4>
+                        <p>- Découpage de la maquette en sections.<br>
+                            - Ecriture du squelette HTML.<br>
+                            - Implémentation des styles.<br>
+                            - Correction responsive avec média queries.<br>
+                            - Contrôle / correction du code (W3C).</p>
+                    </div>
+                </article>
+
+                <!-- OHMYFOOD -->
+                <article class="card card--2">
+                    <div class="card_top">OHMYFOOD</div>
+                    <div class="card_top card_top--back">OHMYFOOD</div>
+
+                    <div class="card_bottom">
+                        <a title="liens github"
+                            href="https://github.com/synaptik-development/kuhlersebastien_3_30042021">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+
+                        <a title="retourner la carte">
+                            <i class="fa-solid fa-arrow-rotate-left 2"></i>
+                        </a>
+
+                        <a title="page web" href="https://synaptik-development.github.io/kuhlersebastien_3_30042021/">
+                            <i class="fa-solid fa-globe"></i>
+                        </a>
+                    </div>
+                    <div class="card_bottom card_bottom--back">
+                        <a title="liens github"
+                            href="https://github.com/synaptik-development/kuhlersebastien_3_30042021">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+
+                        <a title="retourner la carte">
+                            <i class="fa-solid fa-arrow-rotate-left 2"></i>
+                        </a>
+
+                        <a title="page web" href="https://synaptik-development.github.io/kuhlersebastien_3_30042021/">
+                            <i class="fa-solid fa-globe"></i>
+                        </a>
+                    </div>
+
+                    <div class="card_content card_content--front">
+                        <img src="./images/p3.png" alt="capture d'écran du site ohmyfood">
+                    </div>
+                    <div class="card_content card_content--hidden">
+                        <div class="description">
+                            <strong>
+                                Description : <br>
+                                Création d'une page web responsive et maintenable codé en HTML et SCSS.<br>
+                                Le dossier est organisé selon la norme 7.1, utilisation de la méthodologie BEM pour le
+                                balisage sémantique
+                                et application du principe du DRY (Don't Repeat Yourself) grâce à l'utilisation de
+                                variables, mixins et boucles CSS.
+                                Configuration des animations keyframes et contrôle des performances avec devTool
+                                animations de chrome.
+                            </strong>
+                        </div>
+                        <div>
+                            <h4>Techonologies</h4>
+                            <div class="icons">
+                                <img src="./images/html5.png" alt="html5">
+                                <img src="./images/css3.jpg" alt="css3">
+                                <img src="./images/sass.png" alt="sass">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_content card_content--back">
+                        <h4>Processus d'implémentation</h4>
+                        <p>- Mise en place de la structure HTML selon la méthodologie BEM.<br>
+                            - Insertion du contenu texte.<br>
+                            - Implémentation des styles / définition des variables et mixins scss
+                            (couleurs, typographie...).<br>
+                            - Création des animations keyframes (spinner, effet couleurs sur les
+                            composants, aparition / translation du contenu).<br>
+                            - Contrôle / correction du code (W3C).<br>
+                            - Respect du DRY (utilisation de boucles scss).<br>
+                            - Organisation du code selon la méthode 7-1.</p>
+                    </div>
+                </article>
+
+                <!-- LA CHOUETTE AGENCE -->
+                <article class="card card--3">
+                    <div class="card_top">LA CHOUETTE AGENCE</div>
+                    <div class="card_top card_top--back">LA CHOUETTE AGENCE</div>
+
+                    <div class="card_bottom">
+                        <a title="liens github" href="https://github.com/synaptik-development/la_chouette_agence">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+
+                        <a title="retourner la carte">
+                            <i class="fa-solid fa-arrow-rotate-left 3"></i>
+                        </a>
+
+                        <a title="rapport d'analyse SEO" href="/assets/rapport_d_analyse_la_chouette_agence.pdf">
+                            <i class="fa-solid fa-folder"></i>
+                            <p>rapport d'analyse</p>
+                        </a>
+                    </div>
+                    <div class="card_bottom card_bottom--back">
+                        <a title="liens github" href="https://github.com/synaptik-development/la_chouette_agence">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+
+                        <a title="retourner la carte">
+                            <i class="fa-solid fa-arrow-rotate-left 3"></i>
+                        </a>
+
+                        <a title="rapport d'analyse SEO" href="/assets/rapport_d_analyse_la_chouette_agence.pdf">
+                            <i class="fa-solid fa-folder"></i>
+                            <p>rapport d'analyse</p>
+                        </a>
+                    </div>
+
+                    <div class="card_content card_content--front">
+                        <img src="./images/p4.png" alt="capture d'écran du site la chouette agence">
+                    </div>
+                    <div class="card_content card_content--hidden">
+                        <div class="description">
+                            <strong>
+                                Description : <br>
+                                Optimisation SEO et performances d'un site web existant.<br>
+                                Réalisation d'un audit de la page, contrôle de la structure HTML et du balisage
+                                sémantique.<br>
+                                Contrôle de l'accéssibilité (contrastes, alternatives textuelles...). Recherches de mots
+                                clés et optimisation
+                                des performances en réduisant la taille du site.
+                            </strong>
+                        </div>
+                        <div>
+                            <h4>Techonologies</h4>
+                            <div class="icons">
+                                <img src="./images/exel.png" alt="exel">
+                                <img src="./images/word.png" alt="word">
+                                <img src="./images/analytics.png" alt="google analytics">
+                                <img src="./images/ads.png" alt="google ads">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_content card_content--back">
+                        <h4>Processus d'implémentation</h4>
+                        <p>- Audit de la page (wave, chrome devtools...).<br>
+                            - Inspection du code.<br>
+                            - Rédaction de <a href="./assets/audit_la_chouette_agence.pdf">l'audit</a>.<br>
+                            - Mise en place d'une balise google analytics.<br>
+                            - Recherche de mots clés (keyword planner de google ads).<br>
+                            - Correction du code.<br>
+                            - Comparaison des résultats de performances (GTmetrix).<br>
+                            - Rédaction du <a href="./assets/rapport_d_analyse_la_chouette_agence.pdf">rapport
+                                d'analyse</a>.</p>
+                    </div>
+                </article>
+
+                <!-- ORINOCO -->
+                <article class="card card--4">
+                    <div class="card_top">ORINOCO</div>
+                    <div class="card_top card_top--back">ORINOCO</div>
+
+                    <div class="card_bottom">
+                        <a title="liens github" href="https://github.com/synaptik-development/orinoco">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+
+                        <a title="retourner la carte">
+                            <i class="fa-solid fa-arrow-rotate-left 4"></i>
+                        </a>
+
+                        <a title="liens github backend" href="./assets/plan_de_tests_orinoco.pdf">
+                            <i class="fa-solid fa-folder"></i>
+                            <p>plan de tests</p>
+                        </a>
+                    </div>
+                    <div class="card_bottom card_bottom--back">
+                        <a title="liens github" href="https://github.com/synaptik-development/orinoco">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+
+                        <a title="retourner la carte">
+                            <i class="fa-solid fa-arrow-rotate-left 4"></i>
+                        </a>
+
+                        <a title="liens github backend" href="./assets/plan_de_tests_orinoco.pdf">
+                            <i class="fa-solid fa-folder"></i>
+                            <p>plan de tests</p>
+                        </a>
+                    </div>
+
+                    <div class="card_content card_content--front">
+                        <img src="./images/p5.png" alt="">
+                    </div>
+                    <div class="card_content card_content--hidden">
+                        <div class="description">
+                            <strong>
+                                Description : <br>
+                                Création du frontend d'un site de ventes en ligne implémenté en HTML, CSS et
+                                JavaScript.<br>
+                                Récupération des données de l'API avec la méthode fetch JavaScript. Manipulation
+                                d'objets JSON et gestion du panier
+                                d'achats avec localStorage. Gestion de l'affichage responsive avec Bootstrap.
+                            </strong>
+                        </div>
+                        <div>
+                            <h4>Techonologies</h4>
+                            <div class="icons">
+                                <img src="./images/html5.png" alt="html5">
+                                <img src="./images/css3.jpg" alt="css3">
+                                <img src="./images/js.png" alt="JavaScript">
+                                <img src="./images/bootstrap.png" alt="bootstrap">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_content card_content--back">
+                        <h4>Processus d'implémentation</h4>
+                        <p>- Création de mockups (pages : accueil, produit, panier, confirmationd'achat).<br>
+                            - Implémentation de l'affichage (traitement des requêtes vers l'API).<br>
+                        <ul>
+                            <li>page d'accueil</li>
+                            <li>page produit</li>
+                            <li>panier d'achat (récupération localStorage)</li>
+                            <li>confirmation d'achat</li>
+                        </ul>
+                        - Manipulation d'objets JSON.<br>
+                        - rédaction du <a href="./assets/plan_de_tests_orinoco.pdf">plan de tests</a>.</p>
+                    </div>
+                </article>
+
+                <!-- HOT-TAKES -->
+                <article class="card card--5">
+                    <div class="card_top">HOT-TAKES</div>
+                    <div class="card_top card_top--back">HOT-TAKES</div>
+
+                    <div class="card_bottom">
+                        <a title="liens github" href="https://github.com/synaptik-development/hot_takes">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+
+                        <a title="retourner la carte">
+                            <i class="fa-solid fa-arrow-rotate-left 5"></i>
+                        </a>
+                    </div>
+                    <div class="card_bottom card_bottom--back">
+                        <a title="liens github" href="https://github.com/synaptik-development/hot_takes">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+
+                        <a title="retourner la carte">
+                            <i class="fa-solid fa-arrow-rotate-left 5"></i>
+                        </a>
+                    </div>
+
+                    <div class="card_content card_content--front">
+                        <img src="./images/p6.png" alt="logo de la société factice piquaante">
+                    </div>
+                    <div class="card_content card_content--hidden">
+                        <div class="description">
+                            <strong>
+                                Description : <br>
+                                Implémentation du backend pour un site de critiques de sauces piquantes.<br>
+                                Construction d'APIrest avec express NodeJs
+                            </strong>
+                        </div>
+                        <div>
+                            <h4>Techonologies</h4>
+                            <div class="icons">
+                                <img src="./images/html5.png" alt="html5">
+                                <img src="./images/css3.jpg" alt="css3">
+                                <img src="./images/js.png" alt="JavaScript">
+                                <img src="./images/node.png" alt="nodeJS">
+                                <img src="./images/mongo.png" alt="MongoDB">
+                                <img src="./images/postman.png" alt="postman">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_content card_content--back">
+                        <h4>Processus d'implémentation</h4>
+                        <p>- Création de l'application express de node (app.js).<br>
+                            - Configuration du serveur.<br>
+                            - Implémentation de la logique de routing.<br>
+                            - Création des shémas de données mongoose.<br>
+                            - Configuration de multer pour le traitement des images.<br>
+                            - Configuration d'un middleware d'authentification avec jsonwebtoken.<br>
+                            - Implémentation de la logique métier (middleware).<br>
+                            - Utilisation de bcrypt pour crypter les données en transit.<br>
+                            - Configuration de la base de données MongoDB.<br>
+                            - Phase de tests sur postman.</p>
+                    </div>
+                </article>
+
+
                 <!-- GROUPOMANIA -->
                 <article class="card card--6">
-                    <div class="card_top"></div>
-                    <div class="card_top card_top--back"></div>
+                    <div class="card_top">GROUPOMANIA</div>
+                    <div class="card_top card_top--back">GROUPOMANIA</div>
 
                     <div class="card_bottom">
                         <a title="liens github frontend"
@@ -257,7 +610,7 @@
                             <i class="fa-solid fa-arrow-rotate-left 6"></i>
                         </a>
 
-                        <a title="liens github backend" class="return-card"
+                        <a title="liens github backend"
                             href="https://github.com/synaptik-development/GROUPOMANIA-backend">
                             <i class="fa-brands fa-github"> </i>
                             <p>backend</p>
@@ -274,50 +627,48 @@
                             <i class="fa-solid fa-arrow-rotate-left 6"></i>
                         </a>
 
-                        <a title="liens github backend" class="return-card"
+                        <a title="liens github backend"
                             href="https://github.com/synaptik-development/GROUPOMANIA-backend">
                             <i class="fa-brands fa-github"> </i>
                             <p>backend</p>
                         </a>
                     </div>
 
-                    <div class="card_content">
-                        <img src="./images/p7.png" alt="">
+                    <div class="card_content card_content--front">
+                        <img src="./images/p7.png" alt="capture d'écran de l'application">
                     </div>
-                    <div class="card_window"><i class="fa-solid fa-chevron-up"></i></div>
                     <div class="card_content card_content--hidden">
                         <div class="description">
                             <h3>GROUPOMANIA</h3>
                             <strong>
-                                Mission : <br>
-                                Créer un réseau social d'entreprise. Implémenter la partie frontend avec un framework JS
+                                Description : <br>
+                                Création d'un réseau social d'entreprise. La partie frontend est implémentée avec un
+                                framework JS
                                 (VueJS) en respectant les standards du WCAG. <br>
-                                Créer une base de données relationnelle manipulée avec le langage SQL.
+                                Côté back, une base de données relationnelle en langage SQL dont la gestion dans
+                                l'application
+                                est implémentée avec l'ORM sequelize.
                             </strong>
                         </div>
                         <div>
                             <h4>Techonologies</h4>
                             <div class="icons">
-                                <img src="./images/vscode.png" alt="vscode">
                                 <img src="./images/html5.png" alt="html5">
                                 <img src="./images/css3.jpg" alt="css3">
                                 <img src="./images/js.png" alt="JavaScript">
-                                <img src="./images/git.png" alt="git">
                                 <img src="./images/node.png" alt="nodeJS">
                                 <img src="./images/sql.png" alt="SQL">
-                                <img src="./images/sequelize.png" alt="sequelize">
                                 <img src="./images/vuejs.png" alt="VueJS">
                                 <img src="./images/postman.png" alt="postman">
                             </div>
                         </div>
                     </div>
                     <div class="card_content card_content--back">
-                        <h3>IMPLEMENTATION</h3>
                         <h4>BACKEND</h4>
                         <p>- Création d'un schéma de base de données relationnelle avec workbench.<br>
                             - Mise en place de la logique de routing.<br>
                             - Création de la base de données avec l'ORM sequelize.<br>
-                            - Mise en place de la loque métier (implémentation des middleware).<br>
+                            - Mise en place de la logique métier (implémentation des middleware).<br>
                             - Phase de tests sur postman.<br>
                             - Rédaction de la documentation.</p>
 
@@ -326,94 +677,33 @@
                             - Ajout d'un router VueJS.<br>
                             - Refactorisation dans un data store centralisé avec VueX.</p>
                     </div>
-
-                    <!-- <div class="card_face card_face--front">
-                        <div class="card_face_top"></div>
-                        <img class="card_face--front_header" src="./images/p7.png" alt="">
-                        <div class="card_face--front_body">
-                            <h3>GROUPOMANIA</h3>
-                            <strong>
-                                Mission : <br>
-                                Créer un réseau social d'entreprise. Implémenter la partie frontend avec un framework JS
-                                (VueJS) en respectant les standards du WCAG. <br>
-                                Créer une base de données relationnelle manipulée avec le langage SQL.
-                            </strong>
-                        </div>
-                        <div class="card_face_footer">
-                            <a title="liens github frontend"
-                                href="https://github.com/synaptik-development/GROUPOMANIA-frontend">
-                                <i class="fa-brands fa-github"> </i>
-                                <p>frontend</p>
-                            </a>
-
-                            <a title="retourner la carte">
-                                <i class="fa-solid fa-arrow-rotate-left 6"></i>
-                            </a>
-
-                            <a title="liens github backend" class="return-card"
-                                href="https://github.com/synaptik-development/GROUPOMANIA-backend">
-                                <i class="fa-brands fa-github"> </i>
-                                <p>backend</p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="card_face card_face--back">
-                        h3
-                        <div class="list">
-                                <h4>BACKEND</h4>
-                                <p>- Création d'un schéma de base de données relationnelle avec workbench<br>
-                                    - Mise en place de la logique de routing<br>
-                                    - Création de la base de données avec l'ORM sequelize<br>
-                                    - Mise en place de la loque métier (implémentation des middleware)<br>
-                                    - Phase de tests sur postman<br>
-                                    - Rédaction de la documentation</p>
-                                
-                                <h4>FRONTEND</h4>
-                                <p>- Création des vues et des composants VueJS<br>
-                                    - Ajout d'un router VueJS<br>
-                                    - Refactorisation dans un data store centralisé avec VueX</p>
-                        </div>
-                        <div class="card_face_footer">
-                            <a title="liens github frontend"
-                                href="https://github.com/synaptik-development/GROUPOMANIA-frontend">
-                                <i class="fa-brands fa-github"> </i>
-                                <p>frontend</p>
-                            </a>
-
-                            <a title="retourner la carte">
-                                <i class="fa-solid fa-arrow-rotate-left 6"></i>
-                            </a>
-
-                            <a title="liens github backend" class="return-card"
-                                href="https://github.com/synaptik-development/GROUPOMANIA-backend">
-                                <i class="fa-brands fa-github"> </i>
-                                <p>backend</p>
-                            </a>
-                        </div>
-                    </div> -->
                 </article>
             </div>
         </section>
 
-        <section id="cv"></section>
-        <section id="contact"></section>
+        <section id="cv" class="cv">
+            <div class="cv_title">
+                <h2>Curriculum vitae</h2>
+            </div>
+            <div class="cv_content section-content">
+                <img src="/images/CV.jpg" alt="photo du cv">
+                <a href="/assets/CV-kuhler-sebastien.pdf" download="/assets/CV-kuhler-sebastien.pdf">Télécharger le
+                    CV</a>
+            </div>
+        </section>
+
+        <footer id="contact">
+            <img src="./images/logo2.png" alt="sebastien kuhler">
+            <ul>
+                <li>KUHLER Sébastien</li>
+                <li><a href="mailto: sebastien.kuhler@gmail.com">email: sebastien.kuhler@gmail.com</a></li>
+                <li>tel: 06 60 84 99 13</li>
+                <li><a href="https://www.linkedin.com/in/sebastien-kuhler-61887a208/"><i
+                            class="fab fa-linkedin"></i></a>
+                </li>
+            </ul>
+        </footer>
     </main>
-
-
-    <!-- contact -->
-    <!--<footer>
-        <img src="./images/logo.png" alt="sebastien kuhler">
-        <ul>
-            <li>
-                <h4>contact</h4>
-            </li>
-            <li>KUHLER Sébastien</li>
-            <li><a href="mailto: sebastien.kuhler@gmail.com">email: sebastien.kuhler@gmail.com</a></li>
-            <li>tel: 06 60 84 99 13</li>
-            <li><a href="https://www.linkedin.com/in/sebastien-kuhler-61887a208/"><i class="fab fa-linkedin"></i></a>
-            </li>
-        </ul>
-    </footer> -->
 
     <script src="./js/index.js"></script>
 </body>

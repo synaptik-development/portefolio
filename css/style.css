@@ -124,6 +124,7 @@
   }
 }
 .header {
+  position: relative;
   color: #ff7f00;
   display: flex;
   flex-direction: column;
@@ -132,6 +133,14 @@
   padding: 1rem;
   height: 100vh;
   overflow: hidden;
+  animation: storm 20s infinite;
+}
+.header .thunder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 .header_img {
   animation: logo 2500ms ease-in-out forwards;
@@ -147,6 +156,11 @@
 .header_title h1 {
   opacity: 0;
   animation: reveal-h1 1500ms 2500ms forwards;
+}
+@media screen and (max-height: 480px) {
+  .header_title h1 {
+    font-size: 1.5rem;
+  }
 }
 .header_title span {
   position: relative;
@@ -173,7 +187,7 @@
 }
 .header_nav strong {
   opacity: 0;
-  animation: reveal-menu 1500ms 5000ms forwards;
+  animation: reveal-menu 2s 5000ms forwards;
 }
 .header_nav_items {
   display: flex;
@@ -182,18 +196,23 @@
   flex-wrap: wrap;
   gap: 1.5rem;
   opacity: 0;
-  animation: reveal-menu 1500ms 5000ms forwards;
+  animation: reveal-menu 2s 5000ms forwards;
 }
 .header_nav_items a {
   color: #ff7f00;
 }
+@media screen and (max-height: 480px) {
+  .header_nav {
+    font-size: 0.8rem;
+  }
+}
 
 .fixed-navbar {
+  font-family: "Press Start 2P", cursive;
   z-index: 1;
-  background: rgba(3, 34, 76, 0.9);
+  background: rgba(48, 48, 48, 0.9);
   display: flex;
   justify-content: space-between;
-  font-family: "Press Start 2P", cursive;
   padding: 5px 1rem;
   position: fixed;
   top: 0;
@@ -233,15 +252,93 @@
   }
 }
 
+.thunder,
+canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.thunder {
+  width: 100%;
+  height: 100%;
+  background-color: #222;
+  background-image: url("https://drive.google.com/uc?export=view&id=0BzFF7FmbJUo5X0NEUXFVd0NBcWc");
+  background-size: cover;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 0;
+}
+.thunder:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  animation: thunder-bg 6s infinite;
+}
+
+canvas {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#canvas3 {
+  z-index: 5;
+}
+
+#canvas2 {
+  z-index: 10;
+}
+
+#canvas1 {
+  z-index: 100;
+}
+
+@keyframes thunder-bg {
+  0% {
+    background-color: rgba(34, 34, 34, 0.9);
+  }
+  9% {
+    background-color: rgba(34, 34, 34, 0.9);
+  }
+  10% {
+    background-color: rgba(59, 59, 59, 0.3);
+  }
+  10.5% {
+    background-color: rgba(34, 34, 34, 0.9);
+  }
+  80% {
+    background-color: rgba(34, 34, 34, 0.9);
+  }
+  82% {
+    background-color: rgba(59, 59, 59, 0.3);
+  }
+  83% {
+    background-color: rgba(34, 34, 34, 0.9);
+  }
+  83.5% {
+    background-color: rgba(59, 59, 59, 0.3);
+  }
+  100% {
+    background-color: rgba(34, 34, 34, 0.9);
+  }
+}
+
 html,
 body {
-  background-color: #03224c;
+  background-color: #303030;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
-  scroll-behavior: smooth;
-  font-family: cursive;
+  font-family: "Inconsolata", monospace;
 }
 
 a {
@@ -257,13 +354,6 @@ nav a:hover {
 ul {
   list-style-type: none;
   list-style-position: outside;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  font-family: "Press Start 2P", cursive;
 }
 
 main {
@@ -316,9 +406,6 @@ main section {
   background-position: center;
   overflow: hidden;
 }
-.quotes .diaporama .quote h2 {
-  font-family: "Times New Roman", Times, serif;
-}
 .quotes .diaporama .quote--1 {
   background-image: url("/images/error.jpg");
 }
@@ -348,7 +435,7 @@ main section {
 */
 .about {
   background-color: ghostwhite;
-  color: #03224c;
+  color: #303030;
   display: flex;
   gap: 3rem;
   position: relative;
@@ -362,10 +449,11 @@ main section {
   text-align: center;
   writing-mode: vertical-rl;
   text-orientation: upright;
-  border-right: 1px solid #03224c;
+  border-right: 1px solid #303030;
 }
 .about_title h2 {
-  color: #03224c;
+  text-shadow: black 0.1em 0.1em 0.2em;
+  color: #303030;
 }
 @media screen and (max-width: 500px) {
   .about_title {
@@ -376,7 +464,7 @@ main section {
     width: auto;
     writing-mode: horizontal-tb;
     border-right: none;
-    border-bottom: 1px solid #03224c;
+    border-bottom: 1px solid #303030;
   }
   .about_title h2 {
     font-size: 0.9rem;
@@ -428,6 +516,7 @@ main section {
   border-right: 1px solid ghostwhite;
 }
 .skills_title h2 {
+  text-shadow: black 0.1em 0.1em 0.2em;
   color: ghostwhite;
 }
 @media screen and (max-width: 500px) {
@@ -548,7 +637,7 @@ main section {
   background-color: #303030;
   border-radius: 10px;
   padding: 0 5rem;
-  box-shadow: 0 0 10px ghostwhite;
+  box-shadow: gray 0 0 10px;
 }
 @media screen and (max-width: 410px) {
   .skills_list_soft {
@@ -580,6 +669,7 @@ main section {
   border-right: 1px solid ghostwhite;
 }
 .achievements_title h2 {
+  text-shadow: black 0.1em 0.1em 0.2em;
   color: ghostwhite;
 }
 @media screen and (max-width: 500px) {
@@ -599,6 +689,11 @@ main section {
 }
 .achievements_content {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 90%;
+  gap: 2rem;
 }
 .achievements .card {
   width: 350px;
@@ -608,17 +703,18 @@ main section {
   border-radius: 10px;
   box-shadow: 0 0 20px black;
   transition: 600ms ease;
-  overflow: hidden;
   cursor: pointer;
 }
 .achievements .card--active {
   transform: rotateY(180deg);
 }
 .achievements .card_top {
-  z-index: 1;
-  background-color: #303030;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: black 0.1em 0.1em 0.2em;
   border-radius: 10px 10px 0 0;
-  height: 30px;
+  height: 40px;
   position: absolute;
   top: 0;
   width: 100%;
@@ -630,8 +726,8 @@ main section {
   transform: rotateY(180deg);
 }
 .achievements .card_bottom {
-  z-index: 1;
   position: absolute;
+  text-shadow: black 0.1em 0.1em 0.2em;
   bottom: 0;
   width: 100%;
   height: 60px;
@@ -639,7 +735,6 @@ main section {
   justify-content: space-around;
   align-items: center;
   border-radius: 0 0 10px 10px;
-  background-color: #303030;
   color: ghostwhite;
   backface-visibility: hidden;
 }
@@ -672,38 +767,15 @@ main section {
   border-radius: 0 0 10px 0;
   border-left: 1px solid gray;
 }
-.achievements .card_window {
-  background-color: #303030;
-  position: absolute;
-  bottom: 60px;
-  left: 50%;
-  z-index: 1;
-  color: ghostwhite;
-  font-size: 1.5rem;
-  padding: 0.2rem 2rem;
-  transform: translateX(-50%);
-  border-radius: 10px;
-  transition: 500ms ease;
-}
-.achievements .card_window:hover {
-  color: #ff7f00;
-}
-.achievements .card_window .fa-chevron-up {
-  transition: 500ms ease;
-}
-.achievements .card_window .fa-chevron-up--down {
-  transform: rotateZ(180deg);
-}
 .achievements .card_content {
   backface-visibility: hidden;
   position: absolute;
-  width: 100%;
-  top: 30px;
+  top: 40px;
+  left: 0;
+  right: 0;
   bottom: 60px;
-  border: 10px solid #303030;
-  box-sizing: border-box;
 }
-.achievements .card_content img {
+.achievements .card_content--front img {
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -712,13 +784,17 @@ main section {
   transition: 600ms ease;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  background-color: #444242;
+  background: rgba(48, 48, 48, 0.8);
   color: ghostwhite;
-  padding: 1rem;
-  transform: translateY(1000px);
-  z-index: 0;
+  padding: 0.5rem;
+  text-shadow: black 0.1em 0.1em 0.2em;
+  text-align: justify;
+  opacity: 0;
+}
+.achievements .card_content--hidden:hover {
+  opacity: 1;
 }
 .achievements .card_content--hidden h3,
 .achievements .card_content--hidden h4 {
@@ -729,22 +805,126 @@ main section {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  gap: 1rem;
 }
 .achievements .card_content--hidden .icons img {
   height: 3rem;
   width: auto;
 }
-.achievements .card_content--hidden:hover {
-  opacity: 0.9;
-}
-.achievements .card_content--hidden--active {
-  transform: translateY(0);
-}
 .achievements .card_content--back {
   transform: rotateY(180deg);
+  padding: 0.5rem 1rem;
+  text-shadow: black 0.1em 0.1em 0.2em;
+  background: url("/images/logo2.png"), rgba(3, 34, 76, 0.5);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-blend-mode: multiply;
+  color: ghostwhite;
+}
+.achievements .card_content--back a {
+  color: #ff7f00;
+}
+.achievements .card_content--back a:hover {
+  text-decoration: underline;
+}
+
+.cv {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
   background-color: ghostwhite;
-  padding: 0 1rem;
-  text-align: justify;
+}
+.cv_title {
+  width: 50px;
+  position: absolute;
+  left: 5px;
+  top: 50px;
+  bottom: 50px;
+  text-align: center;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  border-right: 1px solid #303030;
+}
+.cv_title h2 {
+  text-shadow: black 0.1em 0.1em 0.2em;
+  color: #303030;
+}
+@media screen and (max-width: 500px) {
+  .cv_title {
+    top: 10px;
+    left: 50px;
+    right: 50px;
+    height: 40px;
+    width: auto;
+    writing-mode: horizontal-tb;
+    border-right: none;
+    border-bottom: 1px solid #303030;
+  }
+  .cv_title h2 {
+    font-size: 0.9rem;
+  }
+}
+.cv img {
+  box-shadow: black 0.1em 0.1em 0.2em;
+  width: 100%;
+  object-fit: cover;
+}
+.cv_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.cv_content a {
+  font-size: 1.2rem;
+  cursor: pointer;
+  width: fit-content;
+  color: ghostwhite;
+  background-color: #303030;
+  padding: 0.5rem 1.5rem;
+  border-radius: 10px;
+  transition: 500ms ease;
+}
+.cv_content a:hover {
+  color: #ff7f00;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3) inset;
+}
+
+footer {
+  background-color: #303030;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  color: ghostwhite;
+}
+@media screen and (min-width: 546px) {
+  footer {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 340px) {
+  footer {
+    font-size: 0.8rem;
+  }
+  footer ul {
+    margin-left: -2rem;
+  }
+  footer i {
+    font-size: 1.1rem;
+  }
+}
+footer a {
+  color: ghostwhite;
+  transition: 500ms ease;
+}
+footer a:hover {
+  color: #ff7f00;
+}
+footer img {
+  height: 100px;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=style.css.map */
