@@ -141,6 +141,8 @@
   left: 0;
   width: 100%;
   height: 100%;
+  opacity: 0;
+  animation: reveal-menu 2s 5000ms forwards;
 }
 .header_img {
   animation: logo 2500ms ease-in-out forwards;
