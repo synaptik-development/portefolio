@@ -409,16 +409,16 @@ main section {
   overflow: hidden;
 }
 .quotes .diaporama .quote--1 {
-  background: url("../images/error.jpg");
+  background: url("");
 }
 .quotes .diaporama .quote--2 {
-  background: url("../images/joker.jpg");
+  background: url("/images/joker.jpg");
 }
 .quotes .diaporama .quote--3 {
-  background: url("../images/cathedrale.jpg");
+  background: url("/images/cathedrale.jpg");
 }
 .quotes .diaporama .quote--4 {
-  background: url("../images/pieton.jpg");
+  background: url("/images/pieton.jpg");
 }
 .quotes .diaporama .quote blockquote {
   width: 65%;
@@ -494,7 +494,7 @@ main section {
 .skills {
   position: relative;
   color: ghostwhite;
-  background: url("../images/background-achievements.jpg"), rgba(0, 0, 0, 0.6);
+  background: url("/images/background-achievements.jpg"), rgba(0, 0, 0, 0.6);
   background-size: cover;
   background-attachment: fixed;
   background-blend-mode: multiply;
@@ -817,7 +817,7 @@ main section {
   transform: rotateY(180deg);
   padding: 0.5rem 1rem;
   text-shadow: black 0.1em 0.1em 0.2em;
-  background: url("../images/logo2.png"), rgba(3, 34, 76, 0.5);
+  background: url(/images/logo2.png), rgba(3, 34, 76, 0.5);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 50% 50%;
