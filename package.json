@@ -4,7 +4,9 @@
   "description": "présentation des compétences et des prjoets réalisés",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./scss/style.scss:./css/style.css"
+    "sass": "sass --watch ./scss/style.scss:./css/style.css",
+    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css"
+
   },
   "author": "synaptik development",
   "license": "ISC",
