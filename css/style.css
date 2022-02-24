@@ -277,6 +277,12 @@ canvas {
   transition: 0.5s;
   transform: translateY(-1000px);
 }
+@media screen and (max-height: 500px) {
+  .fixed-navbar {
+    justify-content: center;
+    padding: 1rem;
+  }
+}
 .fixed-navbar h2 {
   font-size: 0.7rem;
 }
@@ -303,6 +309,11 @@ canvas {
   width: 50px;
 }
 @media screen and (max-width: 400px) {
+  .fixed-navbar img {
+    display: none;
+  }
+}
+@media screen and (max-height: 500px) {
   .fixed-navbar img {
     display: none;
   }
