@@ -310,7 +310,6 @@ canvas {
 
 /* fin de section */
 .header {
-  margin-bottom: 1rem;
   position: relative;
   color: #ff7f00;
   background-color: #303030;
@@ -400,13 +399,12 @@ canvas {
 .quotes {
   color: ghostwhite;
   font-size: 1.2rem;
-  box-shadow: 0 0 50px black inset;
+  box-shadow: 0 0 80px rgba(248, 248, 255, 0.3) inset;
   display: flex;
   align-items: center;
   height: 16rem;
   position: relative;
   overflow: hidden;
-  margin-bottom: 1rem;
 }
 .quotes_slider {
   width: 500%;
