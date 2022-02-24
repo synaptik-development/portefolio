@@ -1,18 +1,9 @@
-const skillHtml = document.querySelector(".gauge-html");
-const skillCss = document.querySelector(".gauge-css");
-const skillJs = document.querySelector(".gauge-js");
-const skillsList = document.querySelector(".skills_list");
-const fixedNavbar = document.querySelector(".fixed-navbar");
-const header = document.getElementsByTagName("header");
-const progressBar = document.querySelectorAll(".progress-bar_background");
-const editor = document.querySelector(".editor");
-const editorContent = "by Sébastien Kuhler";
-const chevronLeft = document.querySelector(".chevron_left");
-const chevronRight = document.querySelector(".chevron_right");
-
 // ----------------------------------------
 // animation machine à écrire
 // ---------------------------------------
+const editor = document.querySelector(".editor");
+const editorContent = "by Sébastien Kuhler";
+
 const writer = (word, i) => {
   if (i < word.length) {
     setTimeout(() => {
@@ -26,14 +17,14 @@ setTimeout(() => {
 }, 3500);
 // fin animation machine à écrire
 
-for (let i = 0; i < progressBar.length; i++) {
-  const element = progressBar[i];
-  element.style.width = progressBar[i].dataset.value;
-  element.classList.add(`bar-${i}`);
-}
 // ----------------------------------------
 // configuration intersection observer
 // ----------------------------------------
+const skillHtml = document.querySelector(".gauge-html");
+const skillCss = document.querySelector(".gauge-css");
+const skillJs = document.querySelector(".gauge-js");
+const skillsList = document.querySelector(".skills_list");
+
 const callback = (entries) => {
   entries.forEach((entry) => {
     if (entry.intersectionRatio > 0) {
@@ -79,8 +70,23 @@ spies.forEach((spy) => {
 // fin configuration intersection observer
 
 // ----------------------------------------
+// valeur progress-bar (skills)
+// ----------------------------------------
+const progressBar = document.querySelectorAll(".progress-bar_background");
+
+for (let i = 0; i < progressBar.length; i++) {
+  const element = progressBar[i];
+  element.style.width = progressBar[i].dataset.value;
+  element.classList.add(`bar-${i}`);
+}
+// fin valeur progress-bar (skills)
+
+// ----------------------------------------
 // declenchement barre de menu fixe
 // ----------------------------------------
+const header = document.getElementsByTagName("header");
+const fixedNavbar = document.querySelector(".fixed-navbar");
+
 window.addEventListener("scroll", () => {
   if (window.scrollY > header[0].scrollHeight) {
     fixedNavbar.classList.add("fixed-navbar--active");
@@ -106,13 +112,15 @@ returnCard.forEach((element) => {
   });
 });
 
-// storm
-var canvas1 = document.getElementById('canvas1');
-var canvas2 = document.getElementById('canvas2');
-var canvas3 = document.getElementById('canvas3');
-var ctx1 = canvas1.getContext('2d');
-var ctx2 = canvas2.getContext('2d');
-var ctx3 = canvas3.getContext('2d');
+// ----------------------------------------
+// animation canvas (storm)
+// ---------------------------------------
+var canvas1 = document.getElementById("canvas1");
+var canvas2 = document.getElementById("canvas2");
+var canvas3 = document.getElementById("canvas3");
+var ctx1 = canvas1.getContext("2d");
+var ctx2 = canvas2.getContext("2d");
+var ctx3 = canvas3.getContext("2d");
 
 var rainthroughnum = 500;
 var speedRainTrough = 25;
@@ -125,9 +133,9 @@ var lightning = [];
 var lightTimeCurrent = 0;
 var lightTimeTotal = 0;
 
-var w = canvas1.width = canvas2.width = canvas3.width = window.innerWidth;
-var h = canvas1.height = canvas2.height = canvas3.height = window.innerHeight;
-window.addEventListener('resize', function() {
+var w = (canvas1.width = canvas2.width = canvas3.width = window.innerWidth);
+var h = (canvas1.height = canvas2.height = canvas3.height = window.innerHeight);
+window.addEventListener("resize", function () {
   w = canvas1.width = canvas2.width = canvas3.width = window.innerWidth;
   h = canvas1.height = canvas2.height = canvas3.height = window.innerHeight;
 });
@@ -145,11 +153,11 @@ function clearcanvas2() {
 }
 
 function clearCanvas3() {
-  ctx3.globalCompositeOperation = 'destination-out';
-  ctx3.fillStyle = 'rgba(0,0,0,' + random(1, 30) / 100 + ')';
+  ctx3.globalCompositeOperation = "destination-out";
+  ctx3.fillStyle = "rgba(0,0,0," + random(1, 30) / 100 + ")";
   ctx3.fillRect(0, 0, w, h);
-  ctx3.globalCompositeOperation = 'source-over';
-};
+  ctx3.globalCompositeOperation = "source-over";
+}
 
 function createRainTrough() {
   for (var i = 0; i < rainthroughnum; i++) {
@@ -159,7 +167,7 @@ function createRainTrough() {
       length: Math.floor(random(1, 830)),
       opacity: Math.random() * 0.2,
       xs: random(-2, 2),
-      ys: random(10, 20)
+      ys: random(10, 20),
     };
   }
 }
@@ -171,7 +179,7 @@ function createRain() {
       y: Math.random() * h,
       l: Math.random() * 1,
       xs: -4 + Math.random() * 4 + 2,
-      ys: Math.random() * 10 + 10
+      ys: Math.random() * 10 + 10,
     };
   }
 }
@@ -187,15 +195,17 @@ function createLightning() {
       y: y,
       xRange: random(5, 30),
       yRange: random(10, 25),
-      path: [{
-        x: x,
-        y: y
-      }],
-      pathLimit: random(40, 55)
+      path: [
+        {
+          x: x,
+          y: y,
+        },
+      ],
+      pathLimit: random(40, 55),
     };
     lightning.push(single);
   }
-};
+}
 
 function drawRainTrough(i) {
   ctx1.beginPath();
@@ -212,9 +222,9 @@ function drawRain(i) {
   ctx2.beginPath();
   ctx2.moveTo(rain[i].x, rain[i].y);
   ctx2.lineTo(rain[i].x + rain[i].l * rain[i].xs, rain[i].y + rain[i].l * rain[i].ys);
-  ctx2.strokeStyle = 'rgba(174,194,224,0.5)';
+  ctx2.strokeStyle = "rgba(174,194,224,0.5)";
   ctx2.lineWidth = 1;
-  ctx2.lineCap = 'round';
+  ctx2.lineCap = "round";
   ctx2.stroke();
 }
 
@@ -223,15 +233,15 @@ function drawLightning() {
     var light = lightning[i];
 
     light.path.push({
-      x: light.path[light.path.length - 1].x + (random(0, light.xRange) - (light.xRange / 2)),
-      y: light.path[light.path.length - 1].y + (random(0, light.yRange))
+      x: light.path[light.path.length - 1].x + (random(0, light.xRange) - light.xRange / 2),
+      y: light.path[light.path.length - 1].y + random(0, light.yRange),
     });
 
     if (light.path.length > light.pathLimit) {
       lightning.splice(i, 1);
     }
 
-    ctx3.strokeStyle = 'rgba(255, 255, 255, .1)';
+    ctx3.strokeStyle = "rgba(255, 255, 255, .1)";
     ctx3.lineWidth = 3;
     if (random(0, 15) === 0) {
       ctx3.lineWidth = 6;
@@ -245,14 +255,15 @@ function drawLightning() {
     for (var pc = 0; pc < light.path.length; pc++) {
       ctx3.lineTo(light.path[pc].x, light.path[pc].y);
     }
-    if (Math.floor(random(0, 30)) === 1) { //to fos apo piso
-      ctx3.fillStyle = 'rgba(255, 255, 255, ' + random(1, 3) / 100 + ')';
+    if (Math.floor(random(0, 30)) === 1) {
+      //to fos apo piso
+      ctx3.fillStyle = "rgba(255, 255, 255, " + random(1, 3) / 100 + ")";
       ctx3.fillRect(0, 0, w, h);
     }
-    ctx3.lineJoin = 'miter';
+    ctx3.lineJoin = "miter";
     ctx3.stroke();
   }
-};
+}
 
 function animateRainTrough() {
   clearcanvas1();
@@ -285,7 +296,7 @@ function animateLightning() {
   if (lightTimeCurrent >= lightTimeTotal) {
     createLightning();
     lightTimeCurrent = 0;
-    lightTimeTotal = 200;  //rand(100, 200)
+    lightTimeTotal = 200; //rand(100, 200)
   }
   drawLightning();
 }
@@ -293,7 +304,7 @@ function animateLightning() {
 function init() {
   createRainTrough();
   createRain();
-  window.addEventListener('resize', createRainTrough);
+  window.addEventListener("resize", createRainTrough);
 }
 init();
 
@@ -304,4 +315,4 @@ function animloop() {
   requestAnimationFrame(animloop);
 }
 animloop();
-// storm
+// fin animation canvas (storm)
