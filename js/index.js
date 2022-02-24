@@ -103,11 +103,18 @@ const returnCard = document.querySelectorAll(".fa-arrow-rotate-left");
 
 returnCard.forEach((element) => {
   let target = document.querySelector(`.card--${element.classList[2]}`);
+  let hideSpy = document.querySelectorAll(`.card--${element.classList[2]} .hide-spy`);
   element.addEventListener("click", () => {
     if (!target.classList[2]) {
       target.classList.add("card--active");
+      hideSpy.forEach((element) => {
+        element.classList.add("hide");
+      });
     } else {
       target.classList.remove("card--active");
+      hideSpy.forEach((element) => {
+        element.classList.remove("hide");
+      });
     }
   });
 });
