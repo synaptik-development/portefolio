@@ -410,7 +410,7 @@ canvas {
 .quotes {
   color: ghostwhite;
   font-size: 1.2rem;
-  box-shadow: 0 0 80px rgba(248, 248, 255, 0.3) inset;
+  box-shadow: 0 0 40px rgba(248, 248, 255, 0.3) inset;
   display: flex;
   align-items: center;
   height: 16rem;
@@ -586,9 +586,15 @@ canvas {
 .skills_list_header .box span {
   font-size: 5rem;
   position: absolute;
+  width: 60%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.skills_list_header .box span img {
+  box-sizing: border-box;
+  width: 100%;
+  object-fit: cover;
 }
 .skills_list_hard .line-skill {
   display: flex;
@@ -648,10 +654,19 @@ canvas {
 /* fin de section */
 .achievements {
   display: flex;
+  flex-direction: column;
   position: relative;
   justify-content: center;
   align-items: center;
   background-color: #303030;
+  color: ghostwhite;
+  gap: 1rem;
+}
+.achievements a {
+  color: ghostwhite;
+}
+.achievements h3 {
+  text-align: center;
 }
 .achievements_title {
   width: 50px;
@@ -718,7 +733,6 @@ canvas {
   top: 0;
   width: 100%;
   backface-visibility: hidden;
-  color: ghostwhite;
   text-align: center;
   transition: 600ms ease;
 }
@@ -734,7 +748,6 @@ canvas {
   justify-content: space-around;
   align-items: center;
   border-radius: 0 0 10px 10px;
-  color: ghostwhite;
   backface-visibility: hidden;
   transition: 600ms ease;
 }
@@ -784,7 +797,6 @@ canvas {
   background-color: #303030;
   width: 2rem;
   height: 2rem;
-  color: ghostwhite;
   border-radius: 50%;
   z-index: 1;
   font-size: 1.2rem;
@@ -806,7 +818,6 @@ canvas {
   justify-content: center;
   align-items: center;
   background: rgba(48, 48, 48, 0.8);
-  color: ghostwhite;
   padding: 0.5rem;
   opacity: 0;
   z-index: 2;
@@ -832,15 +843,11 @@ canvas {
 .achievements .card_content--back {
   transform: rotateY(180deg);
   padding: 0.5rem 1rem;
-  background: url("../images/logo2.png"), rgba(3, 34, 76, 0.5);
+  background: url("../images/logo2.png"), rgba(3, 34, 76, 0.7);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-blend-mode: multiply;
-  color: ghostwhite;
-}
-.achievements .card_content--back a {
-  color: #ff7f00;
 }
 .achievements .card_content--back a:hover {
   text-decoration: underline;
