@@ -42,13 +42,6 @@ const callback = (entries) => {
         const bar = document.querySelector(`.${entry.target.children[1].childNodes[1].classList[1]}`);
         bar.classList.add("bar-active");
       }
-
-      // contrôle de la barre de menu fixe
-      //   if (entry.target.classList[0] === "quotes") {
-      //     stickyNavbar.classList.add("fixed-navbar--active");
-      //   }else{
-      //     stickyNavbar.classList.remove("fixed-navbar--active");
-      //   }
     }
   });
 };
